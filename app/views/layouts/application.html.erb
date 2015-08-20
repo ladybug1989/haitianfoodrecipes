@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-brand">
+      <%= link_to "HaitianRecipe", root_path %>
+    </div>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <%= link_to "Recipe", new_recipe_path %>
+    </li>
+    <li>
+      <%= link_to "Sign out", root_path %>
+    </li>
+  </ul>
+</nav>
 
-<%= yield %>
-
+    <%= yield %>
+  </div>
 </body>
-</html>
+

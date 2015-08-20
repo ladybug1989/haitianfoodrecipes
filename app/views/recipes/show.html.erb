@@ -1,9 +1,19 @@
-<h1>
-  <%= @recipe.title %>
-</h1>
-<p>
-  <%= @recipe.description  %>
-</p>
-<%= link_to "Back", root_path, class: "btn btn-default" %>
-<%= link_to "Edit", edit_recipe_path, class: "btn btn-default" %>
-<%= link_to "Delete", recipe_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default" %>
+<% @recipe.each_slice(3) do |recipes| %>
+  <div class="row">
+    <% recipes.each do |recipe| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= link_to recipe do %>
+              <%= image_tag recipe.image.url(:medium) %>
+            <% end %>
+          </div>
+          <h2>
+            <%= link_to recipe.title, recipe %>
+          </h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+

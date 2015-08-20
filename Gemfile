@@ -14,3 +14,6 @@ group :development, :test do
   gem 'spring'
 end
 gem 'simple_form', '~> 3.1.0'
+gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'cocoon'
+gem 'paperclip', '~> 4.3.0'
