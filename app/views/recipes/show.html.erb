@@ -10,7 +10,13 @@
         </div>
         <div class="description" id="p">
           <%= @recipe.description  %>
+          <p>
+           Submitted by
+         <%= @recipe.user.email %>
+         </p>
+
         </div>
+
       </div>
     </div>
   </div>
