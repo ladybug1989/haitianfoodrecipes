@@ -1,27 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HaitianRecipe</title>
+  <title>Recipe App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-  <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-brand">
-      <%= link_to "HaitianRecipe", root_path %>
-    </div>
-  </div>
-  <ul class="nav navbar-nav navbar-right">
-    <li>
-      <%= link_to "Recipe", new_recipe_path %>
-    </li>
-    <li>
-      <%= link_to "Sign out", root_path %>
-    </li>
-  </ul>
-</nav>
+<body class="bg">
+  <%= render 'layouts/header' %>
   <div class="container">
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, class: "alert" %>
@@ -29,4 +16,4 @@
     <%= yield %>
   </div>
 </body>
-
+</html>
